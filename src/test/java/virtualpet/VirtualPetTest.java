@@ -9,6 +9,7 @@ import org.junit.Test;
 
 public class VirtualPetTest {
 
+
 	@Test
 	public void retrieveHunger(){
 	//arrange
@@ -18,7 +19,7 @@ public class VirtualPetTest {
 	int hunger = underTest.getHunger();
 		
 	//assert
-	Assert.assertEquals(0, hunger);
+	Assert.assertEquals(30, hunger);
 		
 	}
 	
@@ -33,7 +34,7 @@ public class VirtualPetTest {
 		int hunger = underTest.getHunger();
 			
 		//assert
-		Assert.assertEquals(0, hunger);
+		Assert.assertEquals(30, hunger);
 		
 	
 	}
@@ -49,7 +50,7 @@ public class VirtualPetTest {
 		int hunger = underTest.getHunger();
 			
 		//assert
-		Assert.assertEquals(25, hunger);
+		Assert.assertEquals(55, hunger);
 		
 	}
 	
@@ -90,7 +91,7 @@ public class VirtualPetTest {
 		underTest.getWaste(); 
 		
 		//assert
-		Assert.assertEquals(0, 0);
+		Assert.assertEquals(30, 30);
 	}
 	
 	
@@ -103,7 +104,7 @@ public class VirtualPetTest {
 		int petWaste = underTest.getWaste();
 		
 		//arrange
-		Assert.assertEquals(0, petWaste);
+		Assert.assertEquals(30, petWaste);
 		
 	}
 	
@@ -116,8 +117,62 @@ public class VirtualPetTest {
 		underTest.wasteRemoval(20);
 		int petWaste = underTest.getWaste();
 		
-		//arrange
+		//assert
 		Assert.assertEquals(10, petWaste);
+		
+	}
+	
+	@Test
+	public void shouldRetrieveBoredom() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.getBoredom(); 
+		
+		//assert
+		Assert.assertEquals(30, 30);
+		
+	}
+	
+	@Test
+	public void shouldRetrieveBoredomeFromInstancePetBoredome() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		int petBoredom = underTest.getBoredom();
+		
+		//assert
+		Assert.assertEquals(30, petBoredom);
+		
+	}
+	
+	
+	@Test
+	public void shouldHaveAbilityToPlayWithPet() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.playWithPet(0); 
+		int petBoredom = underTest.getBoredom();
+		
+		//assert
+		Assert.assertEquals(30, petBoredom);
+	}
+	
+	@Test
+	public void shouldPlayWithPetWithInstancePetBoredomEffected() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.playWithPet(10);
+		int petBoredom = underTest.getBoredom();
+		
+		//assert
+		Assert.assertEquals(20, petBoredom);
 		
 	}
 	
