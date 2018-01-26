@@ -80,6 +80,47 @@ public class VirtualPetTest {
 		
 	}
 	
+	
+	@Test
+	public void shouldRetrieveWaste() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.getWaste(); 
+		
+		//assert
+		Assert.assertEquals(0, 0);
+	}
+	
+	
+	@Test
+	public void shouldRetrieveWasteFromInstance() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		int petWaste = underTest.getWaste();
+		
+		//arrange
+		Assert.assertEquals(0, petWaste);
+		
+	}
+	
+	@Test
+	public void removeFromPetWaste() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.wasteRemoval(20);
+		int petWaste = underTest.getWaste();
+		
+		//arrange
+		Assert.assertEquals(10, petWaste);
+		
+	}
+	
 
 	
 
