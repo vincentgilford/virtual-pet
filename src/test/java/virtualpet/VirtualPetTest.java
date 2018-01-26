@@ -246,8 +246,18 @@ public class VirtualPetTest {
 		
 	}
 	
-	
-	
+	@Test
+	public void hydratePet() {
+		//arrange
+		VirtualPet underTest = new VirtualPet("Drogon");
+		
+		//act
+		underTest.hydratePet(10);
+		int hydrationForPet = underTest.getThirst();
+		
+		//assert
+		Assert.assertEquals(35, hydrationForPet);
+	}
 	
 	
 	

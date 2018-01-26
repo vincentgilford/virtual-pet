@@ -53,9 +53,6 @@ public class VirtualPet {
 		this.petName = petName; 
 	}
 	
-	public VirtualPet() {
-		
-	}
 
 	public void petSleepTime(int amountPetSlept) {
 		// TODO Auto-generated method stub
@@ -82,8 +79,20 @@ public class VirtualPet {
 		// TODO Auto-generated method stub
 		return petName;
 	}
+	
+	
+	
+	
+	public VirtualPet() {
+		
+	}
 
+	public void hydratePet(int waterForPet) {
+		// TODO Auto-generated method stub
+		hydrationForPet += waterForPet;
+	}
 
+	
 
 
 }
