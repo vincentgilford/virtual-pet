@@ -82,17 +82,17 @@ public class VirtualPetTest {
 	}
 	
 	
-	@Test
-	public void shouldRetrieveWaste() {
-		//arrange
-		VirtualPet underTest = new VirtualPet();
-		
-		//act
-		underTest.getWaste(); 
-		
-		//assert
-		Assert.assertEquals(30, 30);
-	}
+//	@Test
+//	public void shouldRetrieveWaste() {
+//		//arrange
+//		VirtualPet underTest = new VirtualPet();
+//		
+//		//act
+//		underTest.getWaste(); 
+//		
+//		//assert
+//		Assert.assertEquals(30, 30);
+//	}
 	
 	
 	@Test
@@ -122,21 +122,21 @@ public class VirtualPetTest {
 		
 	}
 	
-	@Test
-	public void shouldRetrieveBoredom() {
-		//arrange
-		VirtualPet underTest = new VirtualPet();
-		
-		//act
-		underTest.getBoredom(); 
-		
-		//assert
-		Assert.assertEquals(30, 30);
-		
-	}
+//	@Test
+//	public void shouldRetrieveBoredom() {
+//		//arrange
+//		VirtualPet underTest = new VirtualPet();
+//		
+//		//act
+//		underTest.getBoredom(); 
+//		
+//		//assert
+//		Assert.assertEquals(30, 30);
+//		
+//	}
 	
 	@Test
-	public void shouldRetrieveBoredomeFromInstancePetBoredome() {
+	public void shouldRetrieveBoredomFromInstancePetBoredome() {
 		//arrange
 		VirtualPet underTest = new VirtualPet();
 		
@@ -162,6 +162,7 @@ public class VirtualPetTest {
 		Assert.assertEquals(30, petBoredom);
 	}
 	
+	
 	@Test
 	public void shouldPlayWithPetWithInstancePetBoredomEffected() {
 		//arrange
@@ -176,7 +177,24 @@ public class VirtualPetTest {
 		
 	}
 	
-
+	@Test
+	public void shouldAllowSleepForPet() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.petSleepTime(10); 
+		int petSleepTimeNeeded = underTest.getPetSleep(); 
+				
+		//assert
+		Assert.assertEquals(40, petSleepTimeNeeded);
+		
+	}
+	
+	
+	
+	
+	
 	
 
 	
