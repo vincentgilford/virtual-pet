@@ -6,6 +6,7 @@ public class VirtualPet {
 	int petWaste = 30; 
 	int petBoredom = 30; 
 	int petSleepTimeNeeded = 50; 
+	
 
 	
 	public int getHunger() {
@@ -55,6 +56,11 @@ public class VirtualPet {
 	public void petSleepTime(int amountPetSlept) {
 		// TODO Auto-generated method stub
 		petSleepTimeNeeded -= amountPetSlept; 
+	}
+
+	public void sickenessOfPetHunger() {
+		// TODO Auto-generated method stub
+		hunger -=5; 
 	}
 
 

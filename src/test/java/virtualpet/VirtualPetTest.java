@@ -191,6 +191,20 @@ public class VirtualPetTest {
 		
 	}
 	
+	@Test
+	public void sicknessEffectOnPetHunger() {
+		//arrange
+		VirtualPet underTest = new VirtualPet(); 
+		
+		//act 
+		underTest.sickenessOfPetHunger();
+		int hunger = underTest.getHunger();
+		
+		//assert
+		Assert.assertEquals(25, hunger);
+		
+	}
+	
 	
 	
 	
