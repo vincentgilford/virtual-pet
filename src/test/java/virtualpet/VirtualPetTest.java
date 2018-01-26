@@ -16,10 +16,10 @@ public class VirtualPetTest {
 	VirtualPet underTest = new VirtualPet(); 
 	
 	//act
-	int hunger = underTest.getHunger();
+	int energyForPet = underTest.getHunger();
 		
 	//assert
-	Assert.assertEquals(30, hunger);
+	Assert.assertEquals(30, energyForPet);
 		
 	}
 	
@@ -31,10 +31,10 @@ public class VirtualPetTest {
 		
 		//act
 		underTest.feedPet(0);
-		int hunger = underTest.getHunger();
+		int energyForPet = underTest.getHunger();
 			
 		//assert
-		Assert.assertEquals(30, hunger);
+		Assert.assertEquals(30, energyForPet);
 		
 	
 	}
@@ -47,10 +47,10 @@ public class VirtualPetTest {
 		
 		//act
 		underTest.feedPet(25);
-		int hunger = underTest.getHunger();
+		int energyForPet = underTest.getHunger();
 			
 		//assert
-		Assert.assertEquals(55, hunger);
+		Assert.assertEquals(55, energyForPet);
 		
 	}
 	
@@ -61,10 +61,10 @@ public class VirtualPetTest {
 		VirtualPet underTest = new VirtualPet(); 
 		
 		//act
-		int thirst = underTest.getThirst();
+		int hydrationForPet = underTest.getThirst();
 			
 		//assert
-		Assert.assertEquals(25, thirst);
+		Assert.assertEquals(25, hydrationForPet);
 
 	}
 	
@@ -74,10 +74,10 @@ public class VirtualPetTest {
 		VirtualPet underTest = new VirtualPet(); 
 		
 		//act
-		int thirst = underTest.getThirst();
+		int hydrationForPet = underTest.getThirst();
 		
 		//arrange
-		Assert.assertEquals(25, thirst);
+		Assert.assertEquals(25, hydrationForPet);
 		
 	}
 	
@@ -204,6 +204,35 @@ public class VirtualPetTest {
 		Assert.assertEquals(25, hunger);
 		
 	}
+	
+	@Test
+	public void sicknessEffectOnPetThirst() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.sicknessOfPetThirst();
+		int thirst = underTest.getThirst();
+		
+		//assert
+		Assert.assertEquals(20,thirst);
+	
+	}
+	
+	@Test
+	public void sicknessEffectOnPetWaste() {
+		//arrange
+		VirtualPet underTest = new VirtualPet();
+		
+		//act
+		underTest.sicknessOfPetWaste(); 
+		int petWaste = underTest.getWaste();
+		
+		//assert
+		Assert.assertEquals(35,petWaste);
+	}
+	
+	
 	
 	
 	

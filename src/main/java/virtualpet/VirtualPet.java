@@ -1,8 +1,8 @@
 package virtualpet;
 
 public class VirtualPet {
-	int hunger = 30; 
-	int thirst = 25; 
+	int energyForPet = 30; 
+	int hydrationForPet = 25; 
 	int petWaste = 30; 
 	int petBoredom = 30; 
 	int petSleepTimeNeeded = 50; 
@@ -10,12 +10,12 @@ public class VirtualPet {
 
 	
 	public int getHunger() {
-		return hunger;
+		return energyForPet;
 	}
 
 	public int getThirst() {
 		// TODO Auto-generated method stub
-		return thirst;
+		return hydrationForPet;
 	}
 
 	public int getWaste() {
@@ -35,7 +35,7 @@ public class VirtualPet {
 	
 	public void feedPet(int foodForPet) {
 		// TODO Auto-generated method stub
-		hunger += foodForPet;
+		energyForPet += foodForPet;
 	}
 
 	public void playWithPet(int petPlayTime) {
@@ -60,7 +60,18 @@ public class VirtualPet {
 
 	public void sickenessOfPetHunger() {
 		// TODO Auto-generated method stub
-		hunger -=5; 
+		energyForPet -=5; 
+	}
+
+	public void sicknessOfPetThirst() {
+		// TODO Auto-generated method stub
+		hydrationForPet -=5; 
+		
+	}
+
+	public void sicknessOfPetWaste() {
+		// TODO Auto-generated method stub
+		petWaste +=5;
 	}
 
 
