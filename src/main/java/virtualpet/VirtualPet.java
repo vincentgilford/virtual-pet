@@ -1,12 +1,12 @@
 package virtualpet;
 
 public class VirtualPet {
-	int energyForPet = 30; 
-	int hydrationForPet = 25; 
-	int petWaste = 30; 
-	int petBoredom = 30; 
-	int petSleepTimeNeeded = 50; 
-	
+	private int energyForPet = 30; 
+	private int hydrationForPet = 25; 
+	private int petWaste = 30; 
+	private int petBoredom = 30; 
+	private int petSleepTimeNeeded = 50; 
+	private String petName = ""; 
 
 	
 	public int getHunger() {
@@ -49,6 +49,10 @@ public class VirtualPet {
 	}
 
 	
+	public VirtualPet(String petName) {
+		this.petName = petName; 
+	}
+	
 	public VirtualPet() {
 		
 	}
@@ -72,6 +76,11 @@ public class VirtualPet {
 	public void sicknessOfPetWaste() {
 		// TODO Auto-generated method stub
 		petWaste +=5;
+	}
+
+	public String getPetName() {
+		// TODO Auto-generated method stub
+		return petName;
 	}
 
 

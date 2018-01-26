@@ -232,6 +232,20 @@ public class VirtualPetTest {
 		Assert.assertEquals(35,petWaste);
 	}
 	
+	@Test
+	public void virtualPetConstructorNameTest() {
+		//arrange
+		VirtualPet underTest = new VirtualPet("Drogon");
+		
+		//act
+		underTest.getPetName(); 
+		String petName = underTest.getPetName(); 
+		
+		//assert
+		Assert.assertEquals("Drogon", petName);
+		
+	}
+	
 	
 	
 	
