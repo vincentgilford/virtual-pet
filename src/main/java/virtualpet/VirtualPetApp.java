@@ -19,9 +19,9 @@ public class VirtualPetApp {
 		System.out.println("For explanation purpose here are the stats:");
 		System.out.println(userPet.getPetName() +  "'s Energy " + userPet.getHunger());
 		System.out.println("When you feed " + userPet.getPetName() + " its energy will go up which is good! You do not want energy to get too low or it will get sick");
-		System.out.println(userPet.getPetName() +  "'s Hyrdration Level" + userPet.getThirst());
+		System.out.println(userPet.getPetName() +  "'s Hyrdration Level " + userPet.getThirst());
 		System.out.println("When you water " + userPet.getPetName() + " its Hydration level will go up which is good! You do not want Hydration to get too low or it will get sick");
-		System.out.println(userPet.getPetName() +  "'s waste level" + userPet.getWaste());
+		System.out.println(userPet.getPetName() +  "'s waste level " + userPet.getWaste());
 		System.out.println("When you remove waste: " + userPet.getPetName() + " will go down which is good!");
 		System.out.println(userPet.getPetName() +  "'s boredom level " + userPet.getBoredom());
 		System.out.println("When you play with " + userPet.getPetName() + " will got down which is good!");
@@ -47,24 +47,28 @@ public class VirtualPetApp {
 			System.out.println("How much would you like to feed?, Please enter a number no greater than 10.");	
 			int foodForPet = input.nextInt(); 
 			userPet.feedPet(foodForPet);
+			System.out.println("Energy Level: " + userPet.getHunger());
 		}
 		
 		if (userChoice.equals("2")) {
 			System.out.println("How much fluid would you like provide it?, Please enter a number no greater than 10.");	
 			int waterForPet = input.nextInt(); 
 			userPet.hydratePet(waterForPet);
+			System.out.println("Hydration Level: " + userPet.getThirst());
 		}
 		
 		if (userChoice.equals("3")) {
 			System.out.println("How much waste would you like to remove for " + userPet.getPetName());	
 			int wasteRemoved = input.nextInt(); 
 			userPet.wasteRemoval(wasteRemoved);
+			System.out.println("Waste Level: " + userPet.getWaste());
 		}
 		
 		if (userChoice.equals("4")) {
 			System.out.println("How many long will you like to play with  " + userPet.getPetName());	
 			int petPlayTime = input.nextInt(); 
 			userPet.playWithPet(petPlayTime);
+			System.out.println("Play level: " + userPet.getBoredom());
 		}
 		
 		if (userChoice.equals("5")) {
@@ -81,8 +85,8 @@ public class VirtualPetApp {
 		
 		if (userChoice.equals("6")) {
 			System.out.println(userPet.getPetName() +  "'s Energy " + userPet.getHunger());	
-			System.out.println(userPet.getPetName() +  "'s Hyrdration Level" + userPet.getThirst());
-			System.out.println(userPet.getPetName() +  "'s waste level" + userPet.getWaste());
+			System.out.println(userPet.getPetName() +  "'s Hyrdration Level " + userPet.getThirst());
+			System.out.println(userPet.getPetName() +  "'s waste level " + userPet.getWaste());
 			System.out.println(userPet.getPetName() +  "'s boredom level " + userPet.getBoredom());
 			System.out.println(userPet.getPetName() +  "'s sleep needed " + userPet.getPetSleep());
 		}

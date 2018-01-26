@@ -7,7 +7,8 @@ public class VirtualPet {
 	private int petBoredom = 30; 
 	private int petSleepTimeNeeded = 50; 
 	private String petName = ""; 
-
+	
+	
 	
 	public int getHunger() {
 		return energyForPet;
