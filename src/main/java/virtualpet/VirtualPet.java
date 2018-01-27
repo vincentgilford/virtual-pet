@@ -93,6 +93,15 @@ public class VirtualPet {
 		hydrationForPet += waterForPet;
 	}
 
+	public void tickCycle() {
+		// TODO Auto-generated method stub
+		energyForPet -=5;
+		hydrationForPet -=5; 
+		petWaste +=5;
+		petSleepTimeNeeded +=5; 
+		
+	}
+
 	
 
 

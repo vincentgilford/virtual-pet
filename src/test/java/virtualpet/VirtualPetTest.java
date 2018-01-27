@@ -259,8 +259,63 @@ public class VirtualPetTest {
 		Assert.assertEquals(35, hydrationForPet);
 	}
 	
+	@Test
+	public void implementationOfTickOnEnergy() {
+		//arrange
+		VirtualPet underTest = new VirtualPet("Drogon");
+		
+		//act
+		underTest.tickCycle();
+		int energyForPet = underTest.getHunger();
+		
+		//assert
+		Assert.assertEquals(25, energyForPet);
+		
+		
+	}
 	
+	@Test
+	public void implementationOfTickOnThirst() {
+		//arrange
+		VirtualPet underTest = new VirtualPet("Drogon");
+		
+		//act
+		underTest.tickCycle();
+		int hydrationForPet = underTest.getThirst();
+		
+		//assert 
+		Assert.assertEquals(20, hydrationForPet);
+	}
 	
+	@Test
+	public void implementationOfTickOnWaste() {
+		//arrange
+		VirtualPet underTest = new VirtualPet("Drogon");
+		
+		//act
+		underTest.tickCycle();
+		int petWaste = underTest.getWaste();
+		
+		
+		//assert
+		Assert.assertEquals(35, petWaste);
+		
+		
+	}
+	
+	@Test
+	public void implementationOfTickOnSleep() {
+		//arrange
+		VirtualPet underTest = new VirtualPet("Drogon");
+		
+		//act
+		underTest.tickCycle();
+		int petSleepTimeNeeded = underTest.getPetSleep();
+		
+		//assert 
+		Assert.assertEquals(55, petSleepTimeNeeded);
+		
+	}
 	
 	
 
