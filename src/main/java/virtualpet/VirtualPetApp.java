@@ -116,8 +116,7 @@ public class VirtualPetApp {
 			}
 
 			// sickness implementation -- doctor
-			
-			
+
 			System.out.println("What would you like to do for " + userPet.getPetName());
 			System.out.println("Please Enter a number to match the action associated.");
 			System.out.println("1. Feed " + userPet.getPetName());
