@@ -29,13 +29,13 @@ public class VirtualPetApp {
 		System.out.println(userPet.getPetName() + "'s boredom level " + userPet.getBoredom());
 		System.out.println("When you play with " + userPet.getPetName() + " will got down which is good!");
 		System.out.println(userPet.getPetName() + "'s sleep needed " + userPet.getPetSleep());
-		System.out.println("When you allow " + userPet.getPetName() + " to sleep, the amount of sleep time will go down");
-		
-		
-		
+		System.out
+				.println("When you allow " + userPet.getPetName() + " to sleep, the amount of sleep time will go down");
+
 		System.out.println("Before we begin you need to understand the cycle.");
 		System.out.println("Everytime you interact with your pet that it will complete a cycle for the pet");
-		System.out.println("Each time a cycle passes the stats of your pet will change, Please be wary of this as you choose to interact with your pet");
+		System.out.println(
+				"Each time a cycle passes the stats of your pet will change, Please be wary of this as you choose to interact with your pet");
 		System.out.println("So let's get started!");
 
 		// userMenu
@@ -45,12 +45,12 @@ public class VirtualPetApp {
 		System.out.println("1. Feed " + userPet.getPetName());
 		System.out.println("2. Water " + userPet.getPetName());
 		System.out.println("3. Remove Waste for " + userPet.getPetName());
-		System.out.println("4. Play with" + userPet.getPetName());
-		System.out.println("5. Put" + userPet.getPetName() + "to sleep!");
+		System.out.println("4. Play with " + userPet.getPetName());
+		System.out.println("5. Put " + userPet.getPetName() + " to sleep!");
 		System.out.println("6. See status of " + userPet.getPetName());
 		System.out.println("7. To Quit Menu.");
 		userChoice = input.next();
-		while (!userChoice.equals("7")){
+		while (!userChoice.equals("7")) {
 
 			if (userChoice.equals("1")) {
 				System.out.println("How much would you like to feed?, Please enter a number no greater than 10.");
@@ -87,12 +87,6 @@ public class VirtualPetApp {
 				userPet.petSleepTime(amountPetSlept);
 			}
 
-			if (userChoice.equals("5")) {
-				System.out.println("How long would you like " + userPet.getPetName() + " to sleep?");
-				int amountPetSlept = input.nextInt();
-				userPet.petSleepTime(amountPetSlept);
-			}
-
 			if (userChoice.equals("6")) {
 				System.out.println(userPet.getPetName() + "'s Energy " + userPet.getHunger());
 				System.out.println(userPet.getPetName() + "'s Hyrdration Level " + userPet.getThirst());
@@ -100,41 +94,42 @@ public class VirtualPetApp {
 				System.out.println(userPet.getPetName() + "'s boredom level " + userPet.getBoredom());
 				System.out.println(userPet.getPetName() + "'s sleep needed " + userPet.getPetSleep());
 			}
-			
-			
-			if(userPet.getHunger() < 15){
-				userPet.sickenessOfPetHunger();
-				System.out.println("Uh-oh your pet is sick!" + userPet.getHunger());
-				System.out.println("Please take care to watch your Pet");
-			}
-			if(userPet.getWaste()>50) {
-				userPet.sicknessOfPetWaste();
-				System.out.println("Uh-oh your pet is sick!" + userPet.getWaste());
-				System.out.println("Please take care to watch your Pet");
-				
-			}
-			
-			if(userPet.getThirst()<15) {
-				userPet.sicknessOfPetThirst();
-				System.out.println("Uh-oh your pet is sick!" + userPet.getThirst());
-				System.out.println("Please take care to watch your Pet");
-				
-			}
-			
 
+			if (userPet.getHunger() < 15) {
+				userPet.sickenessOfPetHunger();
+				System.out.println("Uh-oh your pet is sick! " + userPet.getHunger());
+				System.out.println("Please take care to watch your Pet");
+			}
+
+			if (userPet.getWaste() > 50) {
+				userPet.sicknessOfPetWaste();
+				System.out.println("Uh-oh your pet is sick! " + userPet.getWaste());
+				System.out.println("Please take care to watch your Pet");
+
+			}
+
+			if (userPet.getThirst() < 15) {
+				userPet.sicknessOfPetThirst();
+				System.out.println("Uh-oh your pet is sick! " + userPet.getThirst());
+				System.out.println("Please take care to watch your Pet");
+
+			}
+
+			// sickness implementation -- doctor
+			
 			
 			System.out.println("What would you like to do for " + userPet.getPetName());
 			System.out.println("Please Enter a number to match the action associated.");
 			System.out.println("1. Feed " + userPet.getPetName());
 			System.out.println("2. Water " + userPet.getPetName());
 			System.out.println("3. Remove Waste for " + userPet.getPetName());
-			System.out.println("4. Play with" + userPet.getPetName());
-			System.out.println("5. Put" + userPet.getPetName() + "to sleep!");
+			System.out.println("4. Play with " + userPet.getPetName());
+			System.out.println("5. Put" + userPet.getPetName() + " to sleep!");
 			System.out.println("6. See status of " + userPet.getPetName());
 			System.out.println("7. To Quit Menu.");
 			userChoice = input.next();
 			userPet.tickCycle();
-		} 
+		}
 	}
 
 }

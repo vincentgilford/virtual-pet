@@ -1,327 +1,305 @@
 package virtualpet;
+
 import static org.junit.Assert.assertEquals;
 import org.junit.Assert;
 import org.junit.Test;
 
-
-
-
-
 public class VirtualPetTest {
 
+	@Test
+	public void retrieveHunger() {
+		// arrange
+		VirtualPet underTest = new VirtualPet();
+
+		// act
+		int energyForPet = underTest.getHunger();
+
+		// assert
+		Assert.assertEquals(30, energyForPet);
+
+	}
 
 	@Test
-	public void retrieveHunger(){
-	//arrange
-	VirtualPet underTest = new VirtualPet(); 
-	
-	//act
-	int energyForPet = underTest.getHunger();
-		
-	//assert
-	Assert.assertEquals(30, energyForPet);
-		
-	}
-	
-	
-	@Test
-	public void shouldFeedPet(){
-		//arrange
-		VirtualPet underTest = new VirtualPet(); 
-		
-		//act
+	public void shouldFeedPet() {
+		// arrange
+		VirtualPet underTest = new VirtualPet();
+
+		// act
 		underTest.feedPet(0);
 		int energyForPet = underTest.getHunger();
-			
-		//assert
+
+		// assert
 		Assert.assertEquals(30, energyForPet);
-		
-	
+
 	}
-	
-	
+
 	@Test
 	public void shouldFeedPetHungerChanges25() {
-		//arrange
-		VirtualPet underTest = new VirtualPet(); 
-		
-		//act
+		// arrange
+		VirtualPet underTest = new VirtualPet();
+
+		// act
 		underTest.feedPet(25);
 		int energyForPet = underTest.getHunger();
-			
-		//assert
+
+		// assert
 		Assert.assertEquals(55, energyForPet);
-		
+
 	}
-	
-	
+
 	@Test
 	public void shouldRetrieveThirstForPet() {
-		//arrange
-		VirtualPet underTest = new VirtualPet(); 
-		
-		//act
+		// arrange
+		VirtualPet underTest = new VirtualPet();
+
+		// act
 		int hydrationForPet = underTest.getThirst();
-			
-		//assert
+
+		// assert
 		Assert.assertEquals(25, hydrationForPet);
 
 	}
-	
-	@Test 
+
+	@Test
 	public void shouldRetrieveThirstForPetWhenThirstChangesInClass() {
-		//arrange
-		VirtualPet underTest = new VirtualPet(); 
-		
-		//act
+		// arrange
+		VirtualPet underTest = new VirtualPet();
+
+		// act
 		int hydrationForPet = underTest.getThirst();
-		
-		//arrange
+
+		// arrange
 		Assert.assertEquals(25, hydrationForPet);
-		
+
 	}
-	
-	
-//	@Test
-//	public void shouldRetrieveWaste() {
-//		//arrange
-//		VirtualPet underTest = new VirtualPet();
-//		
-//		//act
-//		underTest.getWaste(); 
-//		
-//		//assert
-//		Assert.assertEquals(30, 30);
-//	}
-	
-	
+
+	// @Test
+	// public void shouldRetrieveWaste() {
+	// //arrange
+	// VirtualPet underTest = new VirtualPet();
+	//
+	// //act
+	// underTest.getWaste();
+	//
+	// //assert
+	// Assert.assertEquals(30, 30);
+	// }
+
 	@Test
 	public void shouldRetrieveWasteFromInstance() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
+
+		// act
 		int petWaste = underTest.getWaste();
-		
-		//arrange
+
+		// arrange
 		Assert.assertEquals(30, petWaste);
-		
+
 	}
-	
+
 	@Test
 	public void removeFromPetWaste() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
+
+		// act
 		underTest.wasteRemoval(20);
 		int petWaste = underTest.getWaste();
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(10, petWaste);
-		
+
 	}
-	
-//	@Test
-//	public void shouldRetrieveBoredom() {
-//		//arrange
-//		VirtualPet underTest = new VirtualPet();
-//		
-//		//act
-//		underTest.getBoredom(); 
-//		
-//		//assert
-//		Assert.assertEquals(30, 30);
-//		
-//	}
-	
+
+	// @Test
+	// public void shouldRetrieveBoredom() {
+	// //arrange
+	// VirtualPet underTest = new VirtualPet();
+	//
+	// //act
+	// underTest.getBoredom();
+	//
+	// //assert
+	// Assert.assertEquals(30, 30);
+	//
+	// }
+
 	@Test
 	public void shouldRetrieveBoredomFromInstancePetBoredome() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
+
+		// act
 		int petBoredom = underTest.getBoredom();
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(30, petBoredom);
-		
+
 	}
-	
-	
+
 	@Test
 	public void shouldHaveAbilityToPlayWithPet() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
-		underTest.playWithPet(0); 
+
+		// act
+		underTest.playWithPet(0);
 		int petBoredom = underTest.getBoredom();
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(30, petBoredom);
 	}
-	
-	
+
 	@Test
 	public void shouldPlayWithPetWithInstancePetBoredomEffected() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
+
+		// act
 		underTest.playWithPet(10);
 		int petBoredom = underTest.getBoredom();
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(20, petBoredom);
-		
+
 	}
-	
+
 	@Test
 	public void shouldAllowSleepForPet() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
-		underTest.petSleepTime(10); 
-		int petSleepTimeNeeded = underTest.getPetSleep(); 
-				
-		//assert
+
+		// act
+		underTest.petSleepTime(10);
+		int petSleepTimeNeeded = underTest.getPetSleep();
+
+		// assert
 		Assert.assertEquals(40, petSleepTimeNeeded);
-		
+
 	}
-	
+
 	@Test
 	public void sicknessEffectOnPetHunger() {
-		//arrange
-		VirtualPet underTest = new VirtualPet(); 
-		
-		//act 
+		// arrange
+		VirtualPet underTest = new VirtualPet();
+
+		// act
 		underTest.sickenessOfPetHunger();
 		int hunger = underTest.getHunger();
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(25, hunger);
-		
+
 	}
-	
+
 	@Test
 	public void sicknessEffectOnPetThirst() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
+
+		// act
 		underTest.sicknessOfPetThirst();
 		int thirst = underTest.getThirst();
-		
-		//assert
-		Assert.assertEquals(20,thirst);
-	
+
+		// assert
+		Assert.assertEquals(20, thirst);
+
 	}
-	
+
 	@Test
 	public void sicknessEffectOnPetWaste() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet();
-		
-		//act
-		underTest.sicknessOfPetWaste(); 
+
+		// act
+		underTest.sicknessOfPetWaste();
 		int petWaste = underTest.getWaste();
-		
-		//assert
-		Assert.assertEquals(35,petWaste);
+
+		// assert
+		Assert.assertEquals(35, petWaste);
 	}
-	
+
 	@Test
 	public void virtualPetConstructorNameTest() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet("Drogon");
-		
-		//act
-		underTest.getPetName(); 
-		String petName = underTest.getPetName(); 
-		
-		//assert
+
+		// act
+		underTest.getPetName();
+		String petName = underTest.getPetName();
+
+		// assert
 		Assert.assertEquals("Drogon", petName);
-		
+
 	}
-	
+
 	@Test
 	public void hydratePet() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet("Drogon");
-		
-		//act
+
+		// act
 		underTest.hydratePet(10);
 		int hydrationForPet = underTest.getThirst();
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(35, hydrationForPet);
 	}
-	
+
 	@Test
 	public void implementationOfTickOnEnergy() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet("Drogon");
-		
-		//act
+
+		// act
 		underTest.tickCycle();
 		int energyForPet = underTest.getHunger();
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(25, energyForPet);
-		
-		
+
 	}
-	
+
 	@Test
 	public void implementationOfTickOnThirst() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet("Drogon");
-		
-		//act
+
+		// act
 		underTest.tickCycle();
 		int hydrationForPet = underTest.getThirst();
-		
-		//assert 
+
+		// assert
 		Assert.assertEquals(20, hydrationForPet);
 	}
-	
+
 	@Test
 	public void implementationOfTickOnWaste() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet("Drogon");
-		
-		//act
+
+		// act
 		underTest.tickCycle();
 		int petWaste = underTest.getWaste();
-		
-		
-		//assert
+
+		// assert
 		Assert.assertEquals(35, petWaste);
-		
-		
+
 	}
-	
+
 	@Test
 	public void implementationOfTickOnSleep() {
-		//arrange
+		// arrange
 		VirtualPet underTest = new VirtualPet("Drogon");
-		
-		//act
+
+		// act
 		underTest.tickCycle();
 		int petSleepTimeNeeded = underTest.getPetSleep();
-		
-		//assert 
+
+		// assert
 		Assert.assertEquals(55, petSleepTimeNeeded);
-		
+
 	}
-	
-	
 
-	
-
-	
-	
-	
 }
