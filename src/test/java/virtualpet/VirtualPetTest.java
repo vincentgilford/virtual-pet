@@ -73,18 +73,6 @@ public class VirtualPetTest {
 
 	}
 
-	// @Test
-	// public void shouldRetrieveWaste() {
-	// //arrange
-	// VirtualPet underTest = new VirtualPet();
-	//
-	// //act
-	// underTest.getWaste();
-	//
-	// //assert
-	// Assert.assertEquals(30, 30);
-	// }
-
 	@Test
 	public void shouldRetrieveWasteFromInstance() {
 		// arrange
@@ -112,19 +100,7 @@ public class VirtualPetTest {
 
 	}
 
-	// @Test
-	// public void shouldRetrieveBoredom() {
-	// //arrange
-	// VirtualPet underTest = new VirtualPet();
-	//
-	// //act
-	// underTest.getBoredom();
-	//
-	// //assert
-	// Assert.assertEquals(30, 30);
-	//
-	// }
-
+	
 	@Test
 	public void shouldRetrieveBoredomFromInstancePetBoredome() {
 		// arrange
